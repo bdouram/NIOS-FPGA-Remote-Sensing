@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <alt_types.h>
+#include <io.h>
+#include "system.h"
+#include "sys/alt_irq.h"
+#include "InterruptHandlerForUart.h"
+
+#include "altera_avalon_uart_regs.h"
+#include "basic_io.h"
+
+#define BAUD_RATE 9600
+
+
+void InitUart() {
+	int context_uart1;
+
+	InitUart1(BAUD_RATE);
+
+
+	alt_irq_register(UART_IRQ, &context_uart1, IsrUart1); // install UART1 ISR
+
+
+	//alt_irq_enable_all(UART_IRQ);
+
+}
+
+void enviarDados(char msg[], int tam){
+	int i;
+	for(i = 0; i<tam; i++){
+
+		IOWR_ALTERA_AVALON_UART_TXDATA(UART_BASE, msg[i]);
+		msleep(10);
+	}
+
+
+
+}
+
+int main() {
+	unsigned char ch;
+
+	printf("Hello NiosII!!!!!\n");
+
+	InitUart();
+
+	while (1) {
+		if (!EmptyUart1()) {
+			ch = GetUart1();
+			printf("%c\n",ch);
+
+			if(ch == 'a'){
+				enviarDados("emg", 3);
+			}else{
+				enviarDados("abc", 3);
+			}
+		}
+
+
+	} //while
+	return 0;
+}
+
+

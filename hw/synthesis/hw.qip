@@ -1,0 +1,159 @@
+set_global_assignment -entity "hw" -library "hw" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "hw" -library "hw" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "hw" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "hw" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../hw.sopcinfo"]
+set_instance_assignment -entity "hw" -library "hw" -name SLD_INFO "QSYS_NAME hw HAS_SOPCINFO 1 GENERATION_ID 1512150633"
+set_global_assignment -library "hw" -name MISC_FILE [file join $::quartus(qip_path) "../../hw.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "hw" -name MISC_FILE [file join $::quartus(qip_path) "../../hw.qsys"]
+
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "hw.v"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_irq_mapper.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_width_adapter.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_address_alignment.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_rsp_xbar_mux_001.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_rsp_xbar_mux.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_rsp_xbar_demux_002.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_rsp_xbar_demux.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cmd_xbar_mux.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cmd_xbar_demux_001.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cmd_xbar_demux.sv"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "hw" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_traffic_limiter.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_st_pipeline_base.v"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_id_router_002.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_id_router_001.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_id_router.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_addr_router_001.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_addr_router.sv"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "hw" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_sysid.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_button1.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_led_pio.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_entrada.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_lcd_display.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_timer.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_uart.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_jtag.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_ext_ram.v"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu.ocp"]
+set_global_assignment -library "hw" -name SDC_FILE [file join $::quartus(qip_path) "submodules/hw_cpu.sdc"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu.v"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_bht_ram.mif"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_dc_tag_ram.mif"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_ic_tag_ram.mif"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_jtag_debug_module_sysclk.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_jtag_debug_module_tck.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_jtag_debug_module_wrapper.v"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_mult_cell.v"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_ociram_default_contents.mif"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_oci_test_bench.v"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_rf_ram_a.mif"]
+set_global_assignment -library "hw" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_rf_ram_b.mif"]
+set_global_assignment -library "hw" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hw_cpu_test_bench.v"]
+
+set_global_assignment -entity "hw_irq_mapper" -library "hw" -name IP_TOOL_NAME "altera_irq_mapper"
+set_global_assignment -entity "hw_irq_mapper" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_irq_mapper" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "hw" -name IP_TOOL_NAME "altera_merlin_width_adapter"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_rsp_xbar_mux_001" -library "hw" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "hw_rsp_xbar_mux_001" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_rsp_xbar_mux_001" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_rsp_xbar_mux" -library "hw" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "hw_rsp_xbar_mux" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_rsp_xbar_mux" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_rsp_xbar_demux_002" -library "hw" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "hw_rsp_xbar_demux_002" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_rsp_xbar_demux_002" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_rsp_xbar_demux" -library "hw" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "hw_rsp_xbar_demux" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_rsp_xbar_demux" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_cmd_xbar_mux" -library "hw" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "hw_cmd_xbar_mux" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_cmd_xbar_mux" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_cmd_xbar_demux_001" -library "hw" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "hw_cmd_xbar_demux_001" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_cmd_xbar_demux_001" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_cmd_xbar_demux" -library "hw" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "hw_cmd_xbar_demux" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_cmd_xbar_demux" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_reset_controller" -library "hw" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "hw" -name IP_TOOL_NAME "altera_merlin_burst_adapter"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "hw" -name IP_TOOL_NAME "altera_merlin_traffic_limiter"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_id_router_002" -library "hw" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "hw_id_router_002" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_id_router_002" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_id_router_001" -library "hw" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "hw_id_router_001" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_id_router_001" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_id_router" -library "hw" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "hw_id_router" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_id_router" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_addr_router_001" -library "hw" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "hw_addr_router_001" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_addr_router_001" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_addr_router" -library "hw" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "hw_addr_router" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_addr_router" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "hw" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "hw" -name IP_TOOL_NAME "altera_merlin_slave_agent"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "hw" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_agent" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "hw" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "hw" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_translator" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_sysid" -library "hw" -name IP_TOOL_NAME "altera_avalon_sysid_qsys"
+set_global_assignment -entity "hw_sysid" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_sysid" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_button1" -library "hw" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "hw_button1" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_button1" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_led_pio" -library "hw" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "hw_led_pio" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_led_pio" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_entrada" -library "hw" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "hw_entrada" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_entrada" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_lcd_display" -library "hw" -name IP_TOOL_NAME "altera_avalon_lcd_16207"
+set_global_assignment -entity "hw_lcd_display" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_lcd_display" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_timer" -library "hw" -name IP_TOOL_NAME "altera_avalon_timer"
+set_global_assignment -entity "hw_timer" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_timer" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_uart" -library "hw" -name IP_TOOL_NAME "altera_avalon_uart"
+set_global_assignment -entity "hw_uart" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_uart" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_jtag" -library "hw" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "hw_jtag" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_jtag" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_ext_ram" -library "hw" -name IP_TOOL_NAME "altera_avalon_new_sdram_controller"
+set_global_assignment -entity "hw_ext_ram" -library "hw" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "hw_ext_ram" -library "hw" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "hw_cpu" -library "hw" -name IP_TOOL_NAME "altera_nios2_qsys"
+set_global_assignment -entity "hw_cpu" -library "hw" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "hw_cpu" -library "hw" -name IP_TOOL_ENV "Qsys"

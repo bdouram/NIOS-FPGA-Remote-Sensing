@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sdram_nios">
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_mult_cell:the_hw_cpu_mult_cell|altera_mult_add:the_altmult_add_part_2" CBX_FILE_NAME="altera_mult_add_s1u2.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_jtag:jtag|hw_jtag_scfifo_r:the_hw_jtag_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_ic_data_module:hw_cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_cjd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_ic_tag_module:hw_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_kfg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_mult_cell:the_hw_cpu_mult_cell|altera_mult_add:the_altmult_add_part_2|altera_mult_add_s1u2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|lpm_mult:Mult0" CBX_FILE_NAME="mult_j011.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_nios2_oci:the_hw_cpu_nios2_oci|hw_cpu_nios2_ocimem:the_hw_cpu_nios2_ocimem|hw_cpu_ociram_sp_ram_module:hw_cpu_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_4271.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_register_bank_b_module:hw_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ahf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_mult_cell:the_hw_cpu_mult_cell|altera_mult_add:the_altmult_add_part_1|altera_mult_add_q1u2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|lpm_mult:Mult0" CBX_FILE_NAME="mult_jp01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|lpm_add_sub:Add18" CBX_FILE_NAME="add_sub_qvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_bht_module:hw_cpu_bht|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_93g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_dc_data_module:hw_cpu_dc_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_kdf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_dc_tag_module:hw_cpu_dc_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_9of1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_dc_victim_module:hw_cpu_dc_victim|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_r3d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_mult_cell:the_hw_cpu_mult_cell|altera_mult_add:the_altmult_add_part_1" CBX_FILE_NAME="altera_mult_add_q1u2.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_cpu:cpu|hw_cpu_register_bank_a_module:hw_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_9hf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|hw:inst|hw_jtag:jtag|hw_jtag_scfifo_w:the_hw_jtag_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|block_sdram|alt_pll:inst1|altpll:altpll_component" CBX_FILE_NAME="alt_pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

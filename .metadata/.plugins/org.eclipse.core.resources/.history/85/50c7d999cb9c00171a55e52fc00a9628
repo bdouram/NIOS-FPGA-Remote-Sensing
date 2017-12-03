@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include "basic_io.h"
+#include "system.h"
+#include <string.h>
+#include <altera_avalon_pio_regs.h>
+#include <altera_avalon_timer_regs.h>
+#include <altera_avalon_uart_regs.h>
+
+int segundos, end_timer;
+volatile int timer;
+
+FILE * tr;
+void escreve_lcd(int texto) {
+	FILE* fp;
+	fp = fopen(LCD_DISPLAY_NAME, "w");
+	if (fp == NULL) {
+		fprintf(stderr, "open failed\n");
+
+	}
+	fprintf(fp, "%d\n  ", texto);
+
+	fclose(fp);
+}
+
+
+static void timer_isr(void *context) {
+
+	if (segundos <= 5){
+		printf("timer ativado\n");
+		end_timer = 1;
+		segundos = 0;
+	}else
+		end_timer = 0;
+
+	segundos++;
+
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_BASE, 0);
+
+}
+
+int main() {
+
+	void *timer_ptr;
+	timer_ptr = (void*) &timer;
+
+//Inicialização do Timer 1s
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_BASE, 0x0003);
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_BASE, 0);
+
+//Habilita Interrupção de Timer
+	alt_ic_isr_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID, TIMER_IRQ, timer_isr,
+			timer_ptr, 0x0);
+
+	int i = 1;
+
+	while (1) {
+
+		if (end_timer == 1) {
+			escreve_lcd(i++);
+			printf("contador %d\n", i++);
+			end_timer = 0;
+			IORD_ALTERA_AVALON_PIO_DATA(ENTRADA_BASE);
+		}
+
+	}
+	return 0;
+}
+
