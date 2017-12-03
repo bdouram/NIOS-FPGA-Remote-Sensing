@@ -29,7 +29,7 @@
   ```
   CYCLONE IV - EP4CE30F23
   ```
-![Alt text](https://github.com/bdouram/NIOS-FPGA-Remote-Sensing-/blob/master/images/manual.jpg "FPGA Manual Image")
+![Alt text](https://github.com/bdouram/NIOS-FPGA-Remote-Sensing/blob/master/images/manual.jpg "FPGA Manual Image")
 
 #### Manual
 You can find the manual [here](https://edisciplinas.usp.br/pluginfile.php/2705273/mod_resource/content/1/manual_mercurioiv_v2.pdf) - (portuguese only).
